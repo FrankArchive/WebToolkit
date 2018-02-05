@@ -15,19 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClCompile Include="源.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Response.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sysfunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Request.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Request.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="socket_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sysfunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rebuilder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Response.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Auto_Sign_In.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <Image Include="2964446-fdfb1a8fce8de946.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
