@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Auto_Sign_In", "Auto_Sign_In.vcxproj", "{51E9D567-80C6-494B-9858-4700527CE88C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "web toolkit", "web_toolkit.vcxproj", "{51E9D567-80C6-494B-9858-4700527CE88C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {50A916CE-570B-4F17-96C9-E7F780C2AE0C}
+		SolutionGuid = {DF6D5A9D-2BBA-4AC6-8758-626EC1E07C05}
 	EndGlobalSection
 EndGlobal
