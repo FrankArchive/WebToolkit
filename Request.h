@@ -9,13 +9,9 @@ const string type_dict[4] = { "GET","POST","PUT","DELETE" };
 class Request {
 	int type; //请求类型，如post
 	
-	//必选请求头
 	string host, target;
-
-	//可选请求头
 	map<string, string>key_pool;
-
-	string content;
+	string content;//回复正文
 	
 	bool check();
 public:

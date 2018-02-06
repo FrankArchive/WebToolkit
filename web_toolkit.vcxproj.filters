@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\HTTP">
+      <UniqueIdentifier>{be643ab1-d4c4-4181-bf91-330f449c5f76}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp">
@@ -29,23 +32,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Request.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="socket_core.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="sysfunc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Rebuilder.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Handler.h">
+    <ClInclude Include="Resolver.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Response.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="Request.h">
+      <Filter>头文件\HTTP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

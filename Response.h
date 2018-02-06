@@ -18,7 +18,7 @@ enum Response_Status {
 string string_of(int code);
 class Response {
 	int status;//服务器状态
-	map<string, string>key_pool;//项
+	map<string, string>key_pool;
 	string content;//回复正文
 	
 	//生成回复前的最后整理
