@@ -13,7 +13,7 @@ string Request::toString() {
 		"Host:" + host + "\r\n";
 	for (map<string, string>::iterator i = key_pool.begin();
 		i != key_pool.end(); i++)
-		result += i->first + ":" + i->second + "\r\n";
+		result += i->first + ": " + i->second + "\r\n";
 
 	result += "\r\n" + content;
 	return result;

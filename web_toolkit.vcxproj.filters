@@ -16,6 +16,9 @@
     <Filter Include="头文件\HTTP">
       <UniqueIdentifier>{be643ab1-d4c4-4181-bf91-330f449c5f76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\SOCKET">
+      <UniqueIdentifier>{d90a9484-575b-4e7d-8eeb-b65d0e656f4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp">
@@ -30,6 +33,9 @@
     <ClCompile Include="Request.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Parser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="socket_core.h">
@@ -38,13 +44,13 @@
     <ClInclude Include="sysfunc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Resolver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Response.h">
       <Filter>头文件\HTTP</Filter>
     </ClInclude>
     <ClInclude Include="Request.h">
+      <Filter>头文件\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
       <Filter>头文件\HTTP</Filter>
     </ClInclude>
   </ItemGroup>
