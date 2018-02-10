@@ -3,7 +3,7 @@
 #include"sysfunc.h"
 using std::string; using std::vector; using std::map;
 
-enum Request_Method{ GET, POST, PUT, DELETE };
+enum RequestMethod{ GET, POST, PUT, DELETE };
 const string type_dict[4] = { "GET","POST","PUT","DELETE" };
 
 class Request {

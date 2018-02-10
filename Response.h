@@ -3,7 +3,7 @@
 #include"sysfunc.h"
 
 using namespace std;
-enum Response_Status {
+enum ResponseStatus {
 	OK = 200,
 	Moved_Permanently = 301,
 	Moved_Temporarily = 302,

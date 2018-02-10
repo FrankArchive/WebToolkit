@@ -1,16 +1,16 @@
 #include<iostream>
 using namespace std;
-#define DEBUG_PARSER
+#define DEBUG_REQUEST_RESPONSE
 
 #ifdef DEBUG_REQUEST_RESPONSE
 #include"Response.h"
 #include"Request.h"
 int main() {
-	Response test1(Response_Status::OK);
+	Response test1(ResponseStatus::OK);
 	test1.set_content("Nothing");
 	cout << test1.toString();
 
-	Request test2(Request_Method::GET);
+	Request test2(RequestMethod::GET);
 	test2.set_host("www.baidu.com");
 	test2.set_target("home.html");
 	test2.set_content("I want...");

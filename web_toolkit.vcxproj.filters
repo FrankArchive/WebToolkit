@@ -25,16 +25,16 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Response.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="sysfunc.cpp">
-      <Filter>源文件</Filter>
+      <Filter>头文件\HTTP</Filter>
     </ClCompile>
     <ClCompile Include="Request.cpp">
-      <Filter>源文件</Filter>
+      <Filter>头文件\HTTP</Filter>
     </ClCompile>
     <ClCompile Include="Parser.cpp">
-      <Filter>源文件</Filter>
+      <Filter>头文件\HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="sysfunc.cpp">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="Parser.h">
       <Filter>头文件\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketWrapper.h">
+      <Filter>头文件\SOCKET</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
