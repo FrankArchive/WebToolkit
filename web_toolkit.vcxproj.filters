@@ -36,6 +36,9 @@
     <ClCompile Include="sysfunc.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="SocketWrapper.cpp">
+      <Filter>头文件\SOCKET</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="socket_core.h">
@@ -54,6 +57,9 @@
       <Filter>头文件\HTTP</Filter>
     </ClInclude>
     <ClInclude Include="SocketWrapper.h">
+      <Filter>头文件\SOCKET</Filter>
+    </ClInclude>
+    <ClInclude Include="Messenger.h">
       <Filter>头文件\SOCKET</Filter>
     </ClInclude>
   </ItemGroup>
