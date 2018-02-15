@@ -61,9 +61,12 @@ int SocketPool::add_client(string host, int port) {
 	targ->status = pool[host]->perform_connect(port);
 	if (targ->status == SocketStatusCode::connect_failed)
 		return targ->status;
+
+	return targ->status;
 }
 
 int SocketPool::destroy(string host) {
 	delete pool[host];
 	pool.erase(host);
+	return 0;
 }
