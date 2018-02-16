@@ -12,3 +12,11 @@ char *toStr(int i) {
 	a[num] = 0;
 	return a;
 }
+
+string tidy(string a) {
+	int head = 0, tail = a.length() - 1;
+	while (a[head++] == ' ');
+	while (a[tail--] == ' ');
+	a = a.substr(head, tail - head + 1);
+	return a;
+}

@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-#define DEBUG_REQUEST_RESPONSE
+#define DEBUG_PARSER
 
 #ifdef DEBUG_REQUEST_RESPONSE
 #include"Response.h"
@@ -32,6 +32,8 @@ int main() {
 	Request *b=0;
 	RequestParser test(a);
 	if (test.is_success())b = test.get();
-	cout << b->toString();
+	if (b)
+		b->set_content("new content"),
+		cout << b->toString();
 }
 #endif

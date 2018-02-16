@@ -18,7 +18,7 @@ enum ResponseStatus {
 string string_of(int code);
 class Response {
 	int status;//服务器状态
-	map<string, string>key_pool;
+	unordered_map<string, string>key_pool;
 	string content;//回复正文
 	
 	//生成回复前的最后整理
@@ -27,8 +27,11 @@ public:
 	Response(int stat) {
 		status = stat;
 	}
-	void set_content(string content);
-	int set_key(string key, string value);
+	void set_content(string content) { this->content = content; }
+	int set_key(string key, string value) {
+		key_pool[key] = value;
+		return key_pool.size();
+	}
 	string toString();
 };
 #endif

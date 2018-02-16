@@ -9,9 +9,8 @@ string Request::toString() {
 	check();
 	string result;
 	result +=
-		type_dict[type] + " " + target + " " + "HTTP/1.1\r\n" +
-		"Host:" + host + "\r\n";
-	for (map<string, string>::iterator i = key_pool.begin();
+		type_dict[type] + " " + target + " " + "HTTP/1.1\r\n";
+	for (unordered_map<string, string>::iterator i = key_pool.begin();
 		i != key_pool.end(); i++)
 		result += i->first + ": " + i->second + "\r\n";
 

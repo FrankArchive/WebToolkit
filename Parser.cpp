@@ -1,21 +1,21 @@
 #include"Parser.h"
-int RequestParser::parse_line() {
+int parse_line(string &message, int current) {
 	int flag = current;
 	while (message[flag++] != '\r');
 	return flag-1;
 }
 bool RequestParser::parse() {
 	result = new Request(0);//just for DEBUG!!!!
-	int next = parse_line(), colon;
-	//TODO: Parse first line here!!!!!
+	int next = parse_line(message,current), colon;
+	
 	current = next + 2;
 	while (message[current] != '\r') {
-		next = parse_line();
+		next = parse_line(message, current);
 		for (colon = current; message[colon] != ':'&&colon < next; colon++);
 		if (colon == next)return 1;
 		result->set_key(
-			/*tidy*/(message.substr(current, colon - current)), 
-			/*tidy*/(message.substr(colon + 1, next - colon - 1))
+			tidy(message.substr(current, colon - current)), 
+			tidy(message.substr(colon + 1, next - colon - 1))
 		);
 		current = next + 2;
 	}

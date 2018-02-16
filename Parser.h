@@ -11,6 +11,9 @@ RequestParser a(message);
 if(a.is_success())b=a.get();
 ×Ô¾õÒ»µã
 */
+
+//next position before the next \r\n
+int parse_line(string &message,int current);
 class RequestParser {
 	string message;
 	bool fail_flag;
@@ -18,9 +21,6 @@ class RequestParser {
 	int current;//scanner flag
 
 	bool parse();
-
-	//next position before the next \r\n
-	int parse_line();
 public:
 	RequestParser(string m) :message(m) { current = 0, result = 0; fail_flag = parse(); }
 	bool is_success() { return !fail_flag; }

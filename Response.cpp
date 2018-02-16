@@ -5,16 +5,11 @@ bool Response::check() {
 		set_key("Content-Length", toStr(content.size()));
 	return true;
 }
-void Response::set_content(string content) { this->content = content; }
-int Response::set_key(string key, string value) {
-	key_pool[key] = value;
-	return key_pool.size();
-}
 string Response::toString() {
 	check();
 	string result = (string)"HTTP/1.1 " + toStr(status) + " " + string_of(status) + "\r\n";
 
-	for (map<string, string>::iterator i = key_pool.begin();
+	for (unordered_map<string, string>::iterator i = key_pool.begin();
 		i != key_pool.end(); i++)
 		result += i->first + ":" + i->second + "\r\n";
 

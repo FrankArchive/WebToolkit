@@ -1,13 +1,7 @@
 #ifndef SocketWrapper_h
 #define SocketWrapper_h
 
-
-#include<WinSock2.h>
-#pragma comment(lib,"ws2_32.lib")
-#include<string>
-#include<unordered_map>
-#include<vector>
-using namespace std;
+#include"sysfunc.h"
 #define retry_time 5
 #define try_to_do(x) for (int i = 0; i < retry_time && (x); i++)
 
