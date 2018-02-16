@@ -1,6 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 using namespace std;
-#define DEBUG_PARSER
+#define DEBUG_SOCKET
 
 #ifdef DEBUG_REQUEST_RESPONSE
 #include"Response.h"
@@ -35,5 +36,34 @@ int main() {
 	if (b)
 		b->set_content("new content"),
 		cout << b->toString();
+}
+#endif
+
+#ifdef DEBUG_SOCKET
+#include"SocketWrapper.h"
+#include"Request.h"
+#include"Parser.h"
+int main() {
+	Request req(0);
+	req.set_host("www.baidu.com");
+	req.set_key("Content-Type", "application/x-www-form-urlencoded");
+	req.set_key("Connection", "Keep-Alive");
+	req.set_key("Pragma", "no-cache");
+	req.set_key("Accept", "text/html, application/xhtml+xml, */*");
+	req.set_target("/");
+	cout << req.toString();
+	SocketPool pool;
+	pool.add_client("www.baidu.com");
+	Socket *obj = pool["www.baidu.com"];
+	obj->perform_send(req.toString());
+	obj->perform_recieve();
+
+	FILE *a = fopen("a.html", "w");
+	string output = obj->get_result();
+	RequestParser b(output);
+	output = b.get()->get_content();
+	fprintf(a, "%s", output.c_str());
+	cout << obj->get_result();
+	fclose(a); delete a;
 }
 #endif

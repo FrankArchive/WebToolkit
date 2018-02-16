@@ -20,11 +20,11 @@ public:
 	void set_host(string host) { set_key("Host", host); }
 	void set_target(string targ) { this->target = targ; }
 	void set_content(string content) { this->content = content; }
+	string get_content() { return content; }
 	int set_key(string key, string value) {
 		key_pool[key] = value;
 		return key_pool.size();
 	}
-	
 	string toString();
 };
 #endif

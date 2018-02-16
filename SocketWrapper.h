@@ -47,6 +47,7 @@ public:
 
 	int add_client(string host, int port = 80);
 	int destroy(string host);
+	Socket *operator [](string host);
 };
 
 #endif
